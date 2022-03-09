@@ -8,6 +8,8 @@
 #	i++
 #}
 
+
+#arrays just to prove it works
 .data
 	Zlist: 0 0 0 0 0 0 0 0
 	Xlist: 1 2 3 4 5 6 7 8
@@ -50,7 +52,6 @@ loop:
 	lw $t5, 0($t2)
 	lw $t6, 0($t3)
 		
-	
 	blt $t5, $t6, sum	#if x[i] < y[i] else continue into while
 
 while:
@@ -71,4 +72,5 @@ sum:
 	
 
 exit:
-	
+	li $v0, 10 # use this command to exit execution
+	syscall
